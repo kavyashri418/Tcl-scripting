@@ -410,3 +410,132 @@ pt_shell>info args get_TNV
 ## The Complete Metrics Command
 
 ## Strings, Lists and Pattern Matching
+## Data Types
+- Strings
+- List
+- Associative array
+- Strings are basic data items in Tcl
+  - A Tcl string can contain alphanumeric, pure numeric, boolean or even binary data
+  - Alphanumeric can include any letter, number or punctuation
+  - Format specifiers like %s, %f, %o, %x are used to display the strings
+```
+set y "abcdef"
+set d 1.23
+set o 075
+set h 0xab4
+
+puts (format "Values : %s\t%2.3f\t%o\t%x" $y $d $o $h]
+```
+
+## What are Strings?
+- Strings are a sequence of characters
+
+## Strings Commands
+- string
+- Basic syntax: string operation string_value otherargs
+- Operation
+- match: the string match command searches a target string for a match to a pattern
+- The pattern is matched using the global match rules
+```
+% string match {*TCL*} {This is Tcl session}
+1
+```
+
+- Glob match rules
+- * Matches 0 or more characters
+- ? Matches a single character
+- [] Matches a character in the set defined within the brackets
+
+## Strings Commands
+- tolower
+- The string tolower command converts a string to lowercase letters
+```
+set str "This is a tcl session"
+set lower [string tolower $str]
+puts "$str\t $lower"
+
+- toupper
+- The string toupper command converts strings to uppercase using the same syntax
+```
+set str "This is a tcl session"
+set upper [string toupper $str]
+puts "$str\t $lower"
+
+- length
+- The string length command returns the number of characters in the string
+```
+set s1 "This is Tcl session"
+set length [string length $s1]
+puts "$length"
+```
+
+- first/last
+- Returns the index of the first (or last) occurrence of substr in string
+```
+set str "This is a Tcl session"
+set st_first [string first TCL $str]
+puts "$st_first"
+```
+
+- range
+- Returns the characters in string between first and last
+```
+set str "This is a Tcl session"
+set st_first [string first TCL $str]
+puts "$st_first"
+set st_last [string last session $str]
+puts "$st_last"
+set subset [string range $str $st_first $st_last]
+puts "$subset"
+```
+
+- format
+- The string format generates formatted strings and can perform some data conversions
+- It is similar to sprint command in C language
+- format formatstring data1
+  - formatstring is the format of the string being returned
+  - data1 is the data to substitute into the formatted string
+```
+set str [expr 2.3/4]
+set str_format [format {%6.3f} $str]
+puts "$str_format"
+```
+
+- %f:Floating point
+- %c: ASCII Character value
+- %d: Decimal Integer
+- %o: Octal value
+- %x: Hexadecimal value
+
+## Lists
+- A list is a set of elements enclosed within curly braces as shown: {abc,def,apple}
+- The first element is indexed at 0
+- Lists processing commands
+  - list element1 element2 element3
+  - lappend command appends new data to a list towards the end of the list
+```
+set list_var [list Python Perl TCL]
+puts "$list_var"
+```
+
+```
+set list_var [list Python Perl TCL]
+lappend list_var Ruby
+puts "$list_var"
+```
+
+## What are Lists?
+- Lists are an ordered group of elements (Strings, Embedded Lists)
+```
+set mylist "red blue green" (spaces are used to separate each element)
+```
+
+```
+pt_shell> set mylist "red blue green"
+red blue green
+```
+
+- Lists processing commands
+- 
+
+
