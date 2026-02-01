@@ -535,7 +535,46 @@ pt_shell> set mylist "red blue green"
 red blue green
 ```
 
-- Lists processing commands
-- 
+## Lists processing commands
+- split command return the string as a list
+```
+set list_var1 1.2.3.abc
+set split_var1 [split $list_var1.]
+puts "$split_var1"
+```
+
+- join command joins the elements of a lists into a string
+```
+set numbers [list 1 2 3 4]
+set join_num [join $numbers :]
+puts "$join_num"
+```
+
+- llength command returns the length of the list
+```
+set numbers [list 1 2 3 4]
+set list_num [llength $numbers]
+puts "$list_num"
+```
+
+## 3 Types Pattern Matching on Strings or Lists
+- Pattern matching is an essential component for a variety of useful tasks
+
+- Regular Expressions (regexp -all)
+```
+pt_shell> regexp -all -inline (\s+) $mylist
+red blue green
+```
+
+## Globbing versus exact Pattern Matching
+
+```
+analyze-format verilog [glob risc_rtl/*.v]
+```
+
+## Pattern Matching for Strings
+- The commands used to perform pattern matching for strings
+    
+## Globbing and Special Characters
 
 
