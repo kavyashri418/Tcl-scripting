@@ -578,3 +578,97 @@ analyze-format verilog [glob risc_rtl/*.v]
 ## Globbing and Special Characters
 
 
+## Globbing versus Exact
+```
+pt_shell>redirect-variable rpt1 {report_timing}
+Change the design mode
+pt_shell>redirect-variable rpt2 {report_timing}
+```
+
+- Exact string $rpt1 $rpt2
+- Globbing string $rpt1 $rpt2
+
+- 1 is a successful match and 0 is fail
+- Each timing report will have a data stamp which will differ
+```
+pt_shell>redirect -variable rpt1 {report_timing}
+pt_shell>redirect -variable rpt2 {report_timing}
+pt_shell>string equal $rpt1 $rpt2
+0
+pt_shell>string match $rpt1 $rpt2
+0
+```
+
+- lindex command returns the list element based on the index
+```
+set numbers [lists 1 2 3 4]
+set list_index [lindex $numbers 3]
+puts "$list_index"
+```
+
+- linsert command inserts an element into a list at a given index
+```
+set list_string [list a b c d]
+set new_list [linsert $list_string 0 e]
+puts "$new_list"
+```
+
+- lreplace command replaces one or more lists elements with new lists of elements
+```
+set list_string [list a b c d]
+set new_list [lreplace $list_string 6 2 A B C]
+puts "$new_list"
+```
+
+## What are String Indices?
+- Every character in a string is assigned an index
+- Related Commands
+  - string list
+  - string index
+  - string range
+  - string first
+
+## What are List Indices?
+- Every character in a string is assigned an index
+- Related Commands
+  - Irange
+  - Ireplace
+  - Iindex
+  - Isearch
+  - Iinsert
+
+## Moving between Strings and Lists
+- String to List
+- >>"split": Returns the input string as a list
+- syntax: split data? splitcher
+```
+set test "1,2,3,4,tcl"
+puts [split $test,]
+>1 2 3 4 tcl
+```
+
+- List to String
+- >>"join": Converts a list into a string
+- syntax: join list? seperator
+```
+set test1 [list 1 2 3 4 tcl]
+puts [join $test1,]
+>1,2,3,4,tcl
+```
+
+## COmmand Output
+```
+pt_shell> set test "1,2,3,4,tcl"
+1,2,3,4,tc
+pt_shell> puts [split $test , ]
+1 2 3 4 tcl
+```
+
+```
+pt_shell> set test1 [list 1 2 3 4 tcl]
+1 2 3 4 tcl
+pt_shell> puts [join $test1 ,]
+1,2,3,4,tcl
+```
+
+
