@@ -656,7 +656,7 @@ puts [join $test1,]
 >1,2,3,4,tcl
 ```
 
-## COmmand Output
+## Command Output
 ```
 pt_shell> set test "1,2,3,4,tcl"
 1,2,3,4,tc
