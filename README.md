@@ -13,6 +13,8 @@
   - Multi-platform: The same script can run under Windows OS and Unix
   - Speed: Tcl scripts run faster than Perl scripts
   - Power: Tcl supports standard program flow constructs like if-else, while, for, foreach and switch
+
+<img width="1536" height="1024" alt="ChatGPT Image Feb 5, 2026, 03_53_04 PM" src="https://github.com/user-attachments/assets/0646950c-3156-46f9-af6c-20ecf02d7b77" />
  
 ## Evaluating TCL scripts under Unix
 - The script should be saved with a .tcl extension
