@@ -24,7 +24,7 @@ unix%pt_shell -f scripts/run.tcl
 pt_shell>
 ```
 
-_All subsequent instructions are generic for either tool - Design Compiler or PrimeTime
+_All subsequent instructions are generic for either tool - Design Compiler or PrimeTime_
 - Look at the starting point, an initial procedures has been provided and is shown
 - Source the file ./scripts/metrics.tcl, which contains this initial procedure and execute the command metrics using an arbitrary header message
 
