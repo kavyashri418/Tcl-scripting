@@ -1,5 +1,5 @@
 ## Create a Command Metrix
-_Objective: Expand an existing Tcl procedure to generate runtime metrics
+_Objective: Expand an existing Tcl procedure to generate runtime metrics_
 
 ### Relevant Files & Directories
 ```
