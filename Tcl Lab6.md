@@ -28,4 +28,4 @@ pt_shell>exec diff timing.log clean.log
 ```
 
 - Quit the Synopsys tool
-- 
+
