@@ -76,5 +76,28 @@ play -bad_switch
 {arg_name option_help value_help data_type attributes}
 ```
 
+## Task 4: Add Non-Positional Arguments to clean log
+- Apply non-positional arguments to your procedure clean_log. We can add command output for the optional switch -verbose
+```
+Modify clean_log such that it generates the following help output
+pt_shell> clean_log -help
+Usuage:
+clean_log   Removes duplicate timing reports
+-infile file (Log file to be cleaned)
+-outfile file (Clean log file name)
+[-verbose] (Generate verbose output)
+Modify clean_log such that it generates output with -verbose
+pt_shell> clean_log-in./log/timing.log-out./log/clean.log-v
+This is a space holder for verbose output
+```
+
+- Open the file ./scripts/clean_log.tcl and modify it to match the above output. If unable to complete task 2 and task 3 from lab 1, use ./tcl_procs/clean_log3.tcl for this task
+- Source the modified procedure into either Design Compiler or PrimeTime
+- Printed help is correct
+- Write a Tcl script to create a dictionary data types where dictionary
+  - key is the cell name" and "dictionary value is the corresponding reference cell name" The optional -verbose switch generates output when the switch is on ("This is a space holder for verbose output")
+  - The initial log file (timing.log) and the resulting log file (clean.log) are identical
+  - Quit the Synopsys tool 
+
 
 
