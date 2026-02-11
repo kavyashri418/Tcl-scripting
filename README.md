@@ -2,7 +2,7 @@
 - A widely used scripting tool that was developed for controlling and extending applications
 - Created by John K Ousterhout at the University of California, Berkeley
 - Distributed as open source software
-- Used by many synopsys command shells
+- Used by many synopsys command shell
 
 ## Tcl Overview
 - Tcl stands for Tool Command Language
